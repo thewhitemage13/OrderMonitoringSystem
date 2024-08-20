@@ -10,10 +10,12 @@
    - User update
    - User view by id
    - View all users
+     
 **OrderService**:
    - Creating an order
    - Order deletion
    - Updating order status
+     
 **InventoryManagementService**:
    - Adding a product
    - Deleting an item
@@ -21,12 +23,14 @@
    - Stock replenishment
    - View all items
    - View product by id
+   - 
 **NotificationService**:
    - Creating a notification
    - Deletion of notice
    - View all notifications by user id
    - View notification by user id
    - View all notifications
+     
 **StatisticsService**
    - Creating statistics
    - Deleting daily statistics
