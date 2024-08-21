@@ -2,7 +2,7 @@ package org.thewhitemage13.service;
 
 import com.google.i18n.phonenumbers.NumberParseException;
 import org.springframework.stereotype.Service;
-import org.thewhitemage13.dao.CreateUserDao;
+import org.thewhitemage13.dto.CreateUserDTO;
 import org.thewhitemage13.entity.User;
 import org.thewhitemage13.exception.EmailBusyException;
 import org.thewhitemage13.interfaces.ValidationServiceInterface;
@@ -32,7 +32,7 @@ public class ValidationService implements ValidationServiceInterface {
     }
 
     @Override
-    public String validateUpdateUser(User updateUser, CreateUserDao createUserDa) throws NumberParseException, EmailBusyException {
+    public String validateUpdateUser(User updateUser, CreateUserDTO createUserDa) throws NumberParseException, EmailBusyException {
         return userValidationService.validateUpdateUser(updateUser, createUserDa);
     }
 

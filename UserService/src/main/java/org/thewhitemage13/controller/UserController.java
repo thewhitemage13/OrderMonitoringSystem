@@ -4,8 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.thewhitemage13.dao.CreateUserDao;
-import org.thewhitemage13.dao.GetUserDao;
+import org.thewhitemage13.dto.CreateUserDTO;
+import org.thewhitemage13.dto.GetUserDTO;
 import org.thewhitemage13.exception.EmailBusyException;
 import org.thewhitemage13.exception.PhoneNumberAlreadyTakenException;
 import org.thewhitemage13.exception.UserNotFoundException;
@@ -24,7 +24,7 @@ public class UserController {
     }
 
     @PutMapping("/update/{userId}")
-    public ResponseEntity<String> updateUser(@PathVariable("userId") Long userId ,@RequestBody CreateUserDao createUserDao) {
+    public ResponseEntity<String> updateUser(@PathVariable("userId") Long userId ,@RequestBody CreateUserDTO createUserDao) {
         try {
             userService.updateUser(userId, createUserDao);
             return ResponseEntity.ok("User updated successfully");
@@ -40,7 +40,7 @@ public class UserController {
     }
 
     @GetMapping("/get-all")
-    public ResponseEntity<List<GetUserDao>> getAll() {
+    public ResponseEntity<List<GetUserDTO>> getAll() {
         try {
             return ResponseEntity.ok(userService.getAllUsers());
         }catch (Exception e) {
@@ -77,7 +77,7 @@ public class UserController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity<String> createUser(@RequestBody CreateUserDao createUserDao) {
+    public ResponseEntity<String> createUser(@RequestBody CreateUserDTO createUserDao) {
         try {
             userService.createUser(createUserDao);
             return ResponseEntity.ok("User created successfully");

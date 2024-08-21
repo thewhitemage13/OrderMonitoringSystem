@@ -7,8 +7,8 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.thewhitemage13.dao.CreateUserDao;
-import org.thewhitemage13.dao.GetUserDao;
+import org.thewhitemage13.dto.CreateUserDTO;
+import org.thewhitemage13.dto.GetUserDTO;
 import org.thewhitemage13.entity.User;
 import org.thewhitemage13.exception.EmailBusyException;
 import org.thewhitemage13.exception.PhoneNumberAlreadyTakenException;
@@ -42,7 +42,7 @@ public class UserService implements UserServiceInterface {
     }
 
     @Override
-    public void createUser(CreateUserDao createUserDao) throws EmailBusyException, PhoneNumberAlreadyTakenException, NumberParseException {
+    public void createUser(CreateUserDTO createUserDao) throws EmailBusyException, PhoneNumberAlreadyTakenException, NumberParseException {
         try {
             validationService.validateEmail(createUserDao.getEmail());
             validationService.validatePassword(createUserDao.getPassword());
@@ -65,19 +65,19 @@ public class UserService implements UserServiceInterface {
     }
 
     @Override
-    public GetUserDao getUserById(Long userId) throws UserNotFoundException {
+    public GetUserDTO getUserById(Long userId) throws UserNotFoundException {
         User user = userRepository.findById(userId).orElseThrow(() -> new UserNotFoundException("User with id = %s not found".formatted(userId)));
-        GetUserDao getUserDao = new GetUserDao();
+        GetUserDTO getUserDao = new GetUserDTO();
         userProcessor.getProcessor(getUserDao, user);
         return getUserDao;
     }
 
     @Override
-    public List<GetUserDao> getAllUsers() {
+    public List<GetUserDTO> getAllUsers() {
         List<User> users = userRepository.findAll();
-        List<GetUserDao> getUserDaos = new ArrayList<>();
+        List<GetUserDTO> getUserDaos = new ArrayList<>();
         for(User user : users) {
-            GetUserDao getUserDao = new GetUserDao();
+            GetUserDTO getUserDao = new GetUserDTO();
             userProcessor.getProcessor(getUserDao, user);
             getUserDaos.add(getUserDao);
         }
@@ -85,7 +85,7 @@ public class UserService implements UserServiceInterface {
     }
 
     @Override
-    public void updateUser(Long userId, CreateUserDao createUserDao) throws UserNotFoundException, EmailBusyException, PhoneNumberAlreadyTakenException, NumberParseException {
+    public void updateUser(Long userId, CreateUserDTO createUserDao) throws UserNotFoundException, EmailBusyException, PhoneNumberAlreadyTakenException, NumberParseException {
         User updateUser = userRepository.findById(userId)
                 .orElseThrow(() -> new UserNotFoundException("User with id = %s not found".formatted(userId)));
         validationService.validatePassword(createUserDao.getPassword());
