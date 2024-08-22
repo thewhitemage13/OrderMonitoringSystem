@@ -4,19 +4,19 @@
 **Description:**  Developed a web application using microservice architecture to manage orders and warehouse, and provide notifications and statistics.
 
 ## Functionality
-**UserService**: 
+**[UserService](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/UserService/src/main/java/org/thewhitemage13/service/UserService.java)**:
    - User creation
    - User deletions
    - User update
    - User view by id
    - View all users
      
-**OrderService**:
+**[OrderService](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/OrderService/src/main/java/org/thewhitemage13/service/OrderService.java)**:
    - Creating an order
    - Order deletion
    - Updating order status
      
-**InventoryManagementService**:
+**[InventoryManagementService](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/InventoryManagementService/src/main/java/org/thewhitemage13/service/ProductService.java)**:
    - Adding a product
    - Deleting an item
    - Product update
@@ -24,14 +24,14 @@
    - View all items
    - View product by id
    - 
-**NotificationService**:
+**[NotificationService](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/NotificationService/src/main/java/org/thewhitemage13/service/NotificationService.java)**:
    - Creating a notification
    - Deletion of notice
    - View all notifications by user id
    - View notification by user id
    - View all notifications
      
-**StatisticsService**
+**[StatisticsService](https://github.com/thewhitemage13/OrderMonitoringSystem/tree/main/StatisticsService/src/main/java/org/thewhitemage13/service)**
    - Creating statistics
    - Deleting daily statistics
    - View all statistics
@@ -41,13 +41,13 @@
 
 The project is implemented based on a microservice architecture using the following components:
 
-- **EurekaServer**: To discover microservices and simplify the management of component interactions.
-- **ApiGateway**: To route requests and provide secure and optimized access to microservices.
-- **UserService**: For user management.
-- **OrderService**: For order management
-- **InventoryManagementService**: For warehouse management.
-- **NotificationService**: To receive order status notifications.
-- **StatisticService**: For doing business and understanding general statistics.
+- **[EurekaServer](https://github.com/thewhitemage13/OrderMonitoringSystem/tree/main/EurekaServer)**: To discover microservices and simplify the management of component interactions.
+- **[ApiGateway](https://github.com/thewhitemage13/OrderMonitoringSystem/tree/main/ApiGateWay)**: To route requests and provide secure and optimized access to microservices.
+- **[UserService](https://github.com/thewhitemage13/OrderMonitoringSystem/tree/main/UserService)**: For user management.
+- **[OrderService](https://github.com/thewhitemage13/OrderMonitoringSystem/tree/main/OrderService)**: For order management
+- **[InventoryManagementService](https://github.com/thewhitemage13/OrderMonitoringSystem/tree/main/InventoryManagementService)**: For warehouse management.
+- **[NotificationService](https://github.com/thewhitemage13/OrderMonitoringSystem/tree/main/NotificationService)**: To receive order status notifications.
+- **[StatisticService](https://github.com/thewhitemage13/OrderMonitoringSystem/tree/main/StatisticsService)**: For doing business and understanding general statistics.
 
 ## Rules of Use
 
