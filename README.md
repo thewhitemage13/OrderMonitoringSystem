@@ -23,7 +23,7 @@
    - Stock replenishment
    - View all items
    - View product by id
-   - 
+
 **[NotificationService](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/NotificationService/src/main/java/org/thewhitemage13/service/NotificationService.java)**:
    - Creating a notification
    - Deletion of notice
