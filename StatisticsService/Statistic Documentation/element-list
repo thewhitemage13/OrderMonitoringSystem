@@ -1,0 +1,10 @@
+org.thewhitemage13
+org.thewhitemage13.aspect
+org.thewhitemage13.config
+org.thewhitemage13.controller
+org.thewhitemage13.entity
+org.thewhitemage13.exception
+org.thewhitemage13.handler
+org.thewhitemage13.interfaces
+org.thewhitemage13.repository
+org.thewhitemage13.service

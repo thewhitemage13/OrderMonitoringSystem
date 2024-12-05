@@ -3,6 +3,39 @@ package org.thewhitemage13;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+/**
+ * Represents an event that is triggered when an order is created.
+ * <p>
+ * This class encapsulates all the necessary details related to an order creation event, including information about
+ * the user who placed the order, the items in the order, the shipping address, the order's status, the quantity of items,
+ * the product ID, the total price of the order, and timestamps for when the order was created and last updated.
+ * </p>
+ *
+ * <h2>Key Fields:</h2>
+ * <ul>
+ *     <li><b>id</b>: Unique identifier for the order.</li>
+ *     <li><b>userId</b>: The ID of the user who created the order.</li>
+ *     <li><b>items</b>: A description or list of items included in the order.</li>
+ *     <li><b>address</b>: The shipping address associated with the order.</li>
+ *     <li><b>status</b>: The current status of the order (e.g., "pending", "shipped").</li>
+ *     <li><b>countOfItems</b>: The total number of items in the order.</li>
+ *     <li><b>productId</b>: The ID of the product being ordered.</li>
+ *     <li><b>totalPrice</b>: The total price of the order.</li>
+ *     <li><b>createdAt</b>: Timestamp indicating when the order was created.</li>
+ *     <li><b>updatedAt</b>: Timestamp indicating when the order was last updated.</li>
+ * </ul>
+ *
+ * <h2>Usage:</h2>
+ * <p>
+ * Instances of this class are used in event-driven systems to represent the creation of an order. They carry all the
+ * necessary data related to the order and can be used for further processing, such as updating inventory, notifying
+ * users, or triggering downstream systems.
+ * </p>
+ *
+ *
+ * @author Mukhammed Lolo
+ * @version 1.0.0
+ */
 public class OrderCreatedEvent {
     private Long id;
     private Long userId;

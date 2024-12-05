@@ -1,0 +1,13 @@
+org.thewhitemage13
+org.thewhitemage13.client
+org.thewhitemage13.config
+org.thewhitemage13.controller
+org.thewhitemage13.dto
+org.thewhitemage13.entity
+org.thewhitemage13.exception
+org.thewhitemage13.interfaces
+org.thewhitemage13.kafka
+org.thewhitemage13.logging
+org.thewhitemage13.processor
+org.thewhitemage13.repository
+org.thewhitemage13.service
