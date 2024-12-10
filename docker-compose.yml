@@ -1,0 +1,116 @@
+services:
+  kafka-1:
+    image: bitnami/kafka:latest
+    container_name: kafka-1
+    ports:
+      - "9092:9092"
+      - "9093:9093"
+    environment:
+      - KAFKA_CFG_NODE_ID=1
+      - KAFKA_KRAFT_CLUSTER_ID=VhmRkkbGRWumrDmstDhsmg
+      - KAFKA_CFG_PROCESS_ROLES=controller,broker
+      - KAFKA_CFG_CONTROLLER_QUORUM_VOTERS=1@kafka-1:9093
+      - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092,CONTROLLER://:9093
+      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092
+      - KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+      - KAFKA_CFG_CONTROLLER_LISTENER_NAMES=CONTROLLER
+      - KAFKA_CFG_INTER_BROKER_LISTENER_NAME=PLAINTEXT
+      - KAFKA_CFG_NUM_PARTITIONS=1
+      - KAFKA_CFG_LOG_DIRS=/bitnami/kafka/logs
+      - KAFKA_CFG_OFFSETS_TOPIC_REPLICATION_FACTOR=1
+    volumes:
+      - ./volumes/kafka:/bitnami/kafka
+    restart: always
+
+  redis:
+    image: redis:6.0.7
+    container_name: redis
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_volume_data:/data
+
+  redis_insight:
+    image: redislabs/redisinsight:1.14.0
+    container_name: redis_insight
+    restart: always
+    ports:
+      - "8001:8001"
+    volumes:
+      - redis_insight_volume_data:/db
+
+  # Базы данных для сервисов
+  user_service_data:
+    image: postgres
+    container_name: user_service_data
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=user_service_data
+    volumes:
+      - user_service_data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+
+  statistic_service_data:
+    image: postgres
+    container_name: statistic_service_data
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=statistic_service_data
+    volumes:
+      - statistic_service_data:/var/lib/postgresql/data
+    ports:
+      - "5434:5432"
+
+  order_service_data:
+    image: postgres
+    container_name: order_service_data
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=order_service_data
+    volumes:
+      - order_service_data:/var/lib/postgresql/data
+    ports:
+      - "5435:5432"
+
+  notification_service_data:
+    image: postgres
+    container_name: notification_service_data
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=notification_service_data
+    volumes:
+      - notification_service_data:/var/lib/postgresql/data
+    ports:
+      - "5436:5432"
+
+  inventory_service_data:
+    image: postgres
+    container_name: inventory_service_data
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=inventory_service_data
+    volumes:
+      - inventory_service_data:/var/lib/postgresql/data
+    ports:
+      - "5437:5432"
+
+volumes:
+  redis_volume_data:
+  redis_insight_volume_data:
+  user_service_data:
+  statistic_service_data:
+  order_service_data:
+  notification_service_data:
+  inventory_service_data:
