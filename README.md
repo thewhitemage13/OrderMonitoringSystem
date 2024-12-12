@@ -1,22 +1,22 @@
-# Order Monitoring System 🛒
+# Order Monitoring System 🚚
 
 ## Overview
 Order Monitoring System is a robust web application built using microservice architecture to efficiently manage orders, warehouses, notifications, and statistics. The system is highly scalable and fault-tolerant, providing businesses with a reliable tool for monitoring and optimizing operations.
 
 ## Features
-### **UserService**
+### **User Service** 👤
 - [User Creation](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/UserService/src/main/java/org/thewhitemage13/service/UserService.java)
 - [User Deletion](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/UserService/src/main/java/org/thewhitemage13/service/UserService.java)
 - [User Update](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/UserService/src/main/java/org/thewhitemage13/service/UserService.java)
 - [View User by ID](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/UserService/src/main/java/org/thewhitemage13/service/UserService.java)
 - [View All Users](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/UserService/src/main/java/org/thewhitemage13/service/UserService.java)
 
-### **OrderService**
+### **Order Service** 📦
 - [Create Order](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/OrderService/src/main/java/org/thewhitemage13/service/OrderService.java)
 - [Delete Order](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/OrderService/src/main/java/org/thewhitemage13/service/OrderService.java)
 - [Update Order Status](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/OrderService/src/main/java/org/thewhitemage13/service/OrderService.java)
 
-### **InventoryManagementService**
+### **Inventory Management Service** 🏪
 - [Add Product](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/InventoryManagementService/src/main/java/org/thewhitemage13/service/ProductService.java)
 - [Delete Item](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/InventoryManagementService/src/main/java/org/thewhitemage13/service/ProductService.java)
 - [Update Product](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/InventoryManagementService/src/main/java/org/thewhitemage13/service/ProductService.java)
@@ -24,13 +24,13 @@ Order Monitoring System is a robust web application built using microservice arc
 - [View All Items](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/InventoryManagementService/src/main/java/org/thewhitemage13/service/ProductService.java)
 - [View Product by ID](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/InventoryManagementService/src/main/java/org/thewhitemage13/service/ProductService.java)
 
-### **NotificationService**
+### **Notification Service** 📱
 - [Create Notification](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/NotificationService/src/main/java/org/thewhitemage13/service/NotificationService.java)
 - [Delete Notification](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/NotificationService/src/main/java/org/thewhitemage13/service/NotificationService.java)
 - [View All Notifications](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/NotificationService/src/main/java/org/thewhitemage13/service/NotificationService.java)
 - [View Notifications by User ID](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/NotificationService/src/main/java/org/thewhitemage13/service/NotificationService.java)
 
-### **StatisticsService**
+### **Statistics Service** 📊
 - [Create Statistics](https://github.com/thewhitemage13/OrderMonitoringSystem/tree/main/StatisticsService/src/main/java/org/thewhitemage13/service)
 - [Delete Daily Statistics](https://github.com/thewhitemage13/OrderMonitoringSystem/tree/main/StatisticsService/src/main/java/org/thewhitemage13/service)
 - [View All Statistics](https://github.com/thewhitemage13/OrderMonitoringSystem/tree/main/StatisticsService/src/main/java/org/thewhitemage13/service)
@@ -113,4 +113,4 @@ The system leverages the following tools and frameworks:
 - Enhance security with multi-factor authentication.
 
 ---
-Made with ❤️ by [Your Name](https://github.com/yourusername).
+Made with ❤️ by [Mukhammed Lolo](https://github.com/thewhitemage13).
