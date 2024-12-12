@@ -100,16 +100,17 @@ The system leverages the following tools and frameworks:
      docker-compose up
      ```
 
-5. **Access the Application:**
-   - API Documentation: `http://localhost:8080/swagger-ui.html`
+5. **API Documentation:**
+   - User Service: `http://localhost:8089/swagger-ui.html`
+   - Statistic Service: `http://localhost:8088/swagger-ui.html`
+   - Order Service: `http://localhost:8087/swagger-ui.html`
+   - Notification Service: `http://localhost:8086/swagger-ui.html`
+   - Inventory Service: `http://localhost:8085/swagger-ui.html`
 
 ## Future Improvements 🔮
 - Add a graphical user interface (GUI) for better usability.
 - Implement advanced analytics and reporting features.
 - Enhance security with multi-factor authentication.
-
-## License 📜
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 Made with ❤️ by [Your Name](https://github.com/yourusername).
