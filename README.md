@@ -1,90 +1,115 @@
+# Order Monitoring System 🛒
 
-# Order Monitoring System
+## Overview
+Order Monitoring System is a robust web application built using microservice architecture to efficiently manage orders, warehouses, notifications, and statistics. The system is highly scalable and fault-tolerant, providing businesses with a reliable tool for monitoring and optimizing operations.
 
-**Description:**  Developed a web application using microservice architecture to manage orders and warehouse, and provide notifications and statistics.
+## Features
+### **UserService**
+- [User Creation](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/UserService/src/main/java/org/thewhitemage13/service/UserService.java)
+- [User Deletion](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/UserService/src/main/java/org/thewhitemage13/service/UserService.java)
+- [User Update](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/UserService/src/main/java/org/thewhitemage13/service/UserService.java)
+- [View User by ID](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/UserService/src/main/java/org/thewhitemage13/service/UserService.java)
+- [View All Users](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/UserService/src/main/java/org/thewhitemage13/service/UserService.java)
 
-## Functionality
-**[UserService](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/UserService/src/main/java/org/thewhitemage13/service/UserService.java)**:
-   - User creation
-   - User deletions
-   - User update
-   - User view by id
-   - View all users
-     
-**[OrderService](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/OrderService/src/main/java/org/thewhitemage13/service/OrderService.java)**:
-   - Creating an order
-   - Order deletion
-   - Updating order status
-     
-**[InventoryManagementService](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/InventoryManagementService/src/main/java/org/thewhitemage13/service/ProductService.java)**:
-   - Adding a product
-   - Deleting an item
-   - Product update
-   - Stock replenishment
-   - View all items
-   - View product by id
+### **OrderService**
+- [Create Order](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/OrderService/src/main/java/org/thewhitemage13/service/OrderService.java)
+- [Delete Order](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/OrderService/src/main/java/org/thewhitemage13/service/OrderService.java)
+- [Update Order Status](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/OrderService/src/main/java/org/thewhitemage13/service/OrderService.java)
 
-**[NotificationService](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/NotificationService/src/main/java/org/thewhitemage13/service/NotificationService.java)**:
-   - Creating a notification
-   - Deletion of notice
-   - View all notifications by user id
-   - View notification by user id
-   - View all notifications
-     
-**[StatisticsService](https://github.com/thewhitemage13/OrderMonitoringSystem/tree/main/StatisticsService/src/main/java/org/thewhitemage13/service)**
-   - Creating statistics
-   - Deleting daily statistics
-   - View all statistics
-   - View statistics for a specific day
+### **InventoryManagementService**
+- [Add Product](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/InventoryManagementService/src/main/java/org/thewhitemage13/service/ProductService.java)
+- [Delete Item](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/InventoryManagementService/src/main/java/org/thewhitemage13/service/ProductService.java)
+- [Update Product](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/InventoryManagementService/src/main/java/org/thewhitemage13/service/ProductService.java)
+- [Stock Replenishment](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/InventoryManagementService/src/main/java/org/thewhitemage13/service/ProductService.java)
+- [View All Items](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/InventoryManagementService/src/main/java/org/thewhitemage13/service/ProductService.java)
+- [View Product by ID](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/InventoryManagementService/src/main/java/org/thewhitemage13/service/ProductService.java)
 
-## Architecture
+### **NotificationService**
+- [Create Notification](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/NotificationService/src/main/java/org/thewhitemage13/service/NotificationService.java)
+- [Delete Notification](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/NotificationService/src/main/java/org/thewhitemage13/service/NotificationService.java)
+- [View All Notifications](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/NotificationService/src/main/java/org/thewhitemage13/service/NotificationService.java)
+- [View Notifications by User ID](https://github.com/thewhitemage13/OrderMonitoringSystem/blob/main/NotificationService/src/main/java/org/thewhitemage13/service/NotificationService.java)
 
-The project is implemented based on a microservice architecture using the following components:
+### **StatisticsService**
+- [Create Statistics](https://github.com/thewhitemage13/OrderMonitoringSystem/tree/main/StatisticsService/src/main/java/org/thewhitemage13/service)
+- [Delete Daily Statistics](https://github.com/thewhitemage13/OrderMonitoringSystem/tree/main/StatisticsService/src/main/java/org/thewhitemage13/service)
+- [View All Statistics](https://github.com/thewhitemage13/OrderMonitoringSystem/tree/main/StatisticsService/src/main/java/org/thewhitemage13/service)
+- [View Statistics for a Specific Day](https://github.com/thewhitemage13/OrderMonitoringSystem/tree/main/StatisticsService/src/main/java/org/thewhitemage13/service)
 
-- **[EurekaServer](https://github.com/thewhitemage13/OrderMonitoringSystem/tree/main/EurekaServer)**: To discover microservices and simplify the management of component interactions.
-- **[ApiGateway](https://github.com/thewhitemage13/OrderMonitoringSystem/tree/main/ApiGateWay)**: To route requests and provide secure and optimized access to microservices.
-- **[UserService](https://github.com/thewhitemage13/OrderMonitoringSystem/tree/main/UserService)**: For user management.
-- **[OrderService](https://github.com/thewhitemage13/OrderMonitoringSystem/tree/main/OrderService)**: For order management
-- **[InventoryManagementService](https://github.com/thewhitemage13/OrderMonitoringSystem/tree/main/InventoryManagementService)**: For warehouse management.
-- **[NotificationService](https://github.com/thewhitemage13/OrderMonitoringSystem/tree/main/NotificationService)**: To receive order status notifications.
-- **[StatisticService](https://github.com/thewhitemage13/OrderMonitoringSystem/tree/main/StatisticsService)**: For doing business and understanding general statistics.
+## Architecture 🏗️
+The project employs a distributed microservice architecture to ensure scalability and fault tolerance. Key components include:
+- **[EurekaServer](https://github.com/thewhitemage13/OrderMonitoringSystem/tree/main/EurekaServer):** Simplifies microservice discovery and interaction.
+- **[ApiGateway](https://github.com/thewhitemage13/OrderMonitoringSystem/tree/main/ApiGateWay):** Routes requests efficiently and provides secure access to services.
+- **UserService:** Manages user-related operations.
+- **OrderService:** Handles order-related functionalities.
+- **InventoryManagementService:** Manages warehouse operations.
+- **NotificationService:** Sends order status notifications.
+- **StatisticsService:** Generates and manages business statistics.
 
-## Rules of Use
-
+## Rules and Constraints ⚠️
 - Email and phone number must be unique.
-- The user id we specify in the order must exist.
-- Product id we specify in the order must exist.
+- The user ID specified in an order must exist.
+- Product ID specified in an order must exist.
 
-## Technologies
+## Technologies 🛠️
+The system leverages the following tools and frameworks:
+- **Java**: Core language.
+- **Spring Framework**: Includes Spring Boot, Spring Data JPA, Spring Cloud, Spring Web, and Spring AOP.
+- **PostgreSQL**: Relational database.
+- **Kafka**: Asynchronous communication between microservices.
+- **Redis**: In-memory caching for enhanced performance.
+- **Maven**: Dependency management and build automation.
+- **Passay**: Ensures password security.
+- **libphonenumber**: Validates phone numbers.
+- **Commons-Validator**: Data validation library.
+- **Design Patterns**: Promotes clean and maintainable code.
+- **S.O.L.I.D.**: Encourages flexible and extensible architecture.
 
-The following technologies and libraries are used in the project:
+## Achievements 🏆
+- **Microservice Architecture**: Distributed system ensuring scalability and fault tolerance.
+- **Performance Optimization**: Enhanced database operations leading to a 40% performance boost.
+- **Advanced Framework Integration**: Used EurekaServer for simplified microservice interactions.
+- **Secure and Efficient Routing**: Leveraged ApiGateway and Kafka for high performance.
+- **User-Centric Design**: Developed NotificationService and StatisticsService to enhance user interaction.
+- **Data Validation and Security**: Utilized libraries like Passay and libphonenumber to validate user data.
 
-- **Java**.
-- **Spring Framework**:
-  - Spring Boot
-  - Spring Data JPA
-  - Spring Cloud
-  - Spring Web
-- **PostgreSQL** is a relational database.
-- **Kafka** - message broker for asynchronous communication between microservices.
-- **Maven** - a tool for dependency management and project building.
-- **Passay** - a library for password security.
-- **libphonenumber** - library for processing and validating phone numbers.
-- **Commons-Validator** - library for data validation.
-- **Design Patterns** - design patterns for creating clean and maintainable code.
-- **S.O.L.I.D.** - Principles for architecture flexibility and scalability.
+## Installation and Startup 🚀
 
-## Achievements
-- Microservice architecture: Implemented distributed microservice architecture providing  high scalability and fault tolerance.
-- Performance Optimization: Optimized database operations using Spring Data JPA and PostgreSQL, resulting in a 40% performance improvement.
-- EurekaServer Integration: Integrate EurekaServer to simplify communication between microservices.
-- Efficient routing: Implemented ApiGateway for secure and optimized query routing.
-- Improved user interaction: NotificationService and StatisticService are developed to improve user interaction and track key metrics.
-- Data Validation and Security: Used Passay, libphonenumber and Commons-Validator libraries to provide validation and security of user data.
+1. **Prerequisites:**
+   - Install [JDK](https://www.oracle.com/java/technologies/javase-downloads.html).
+   - Install [Maven](https://maven.apache.org/download.cgi).
+   - Install [PostgreSQL](https://www.postgresql.org/download/).
+   - Install [Kafka](https://kafka.apache.org/downloads).
 
-### Installation and Startup
+2. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/thewhitemage13/OrderMonitoringSystem.git
+   cd OrderMonitoringSystem
+   ```
 
-- JDK (Java Development Kit) installed.
-- Maven installed.
-- Installed PostgreSQL.
-- Kafka installed.
+3. **Set Up Environment:**
+   - Configure database connections in the `application.properties` files.
+
+4. **Build and Run:**
+   - Build the project:
+     ```bash
+     mvn clean install
+     ```
+   - Start services using Docker:
+     ```bash
+     docker-compose up
+     ```
+
+5. **Access the Application:**
+   - API Documentation: `http://localhost:8080/swagger-ui.html`
+
+## Future Improvements 🔮
+- Add a graphical user interface (GUI) for better usability.
+- Implement advanced analytics and reporting features.
+- Enhance security with multi-factor authentication.
+
+## License 📜
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+Made with ❤️ by [Your Name](https://github.com/yourusername).
