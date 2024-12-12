@@ -56,6 +56,7 @@ The system leverages the following tools and frameworks:
 - **Java**: Core language.
 - **Spring Framework**: Includes Spring Boot, Spring Data JPA, Spring Cloud, Spring Web, and Spring AOP.
 - **PostgreSQL**: Relational database.
+- **Docker**: Application containerization.
 - **Kafka**: Asynchronous communication between microservices.
 - **Redis**: In-memory caching for enhanced performance.
 - **Maven**: Dependency management and build automation.
