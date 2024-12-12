@@ -62,7 +62,7 @@ public class SwaggerConfig {
                 .servers(
                         List.of(
                                 new Server()
-                                        .url("http://localhost:8086")
+                                        .url("http://localhost:8085")
                                         .description("Local development server")
                         )
                 )
